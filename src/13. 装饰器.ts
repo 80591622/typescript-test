@@ -105,4 +105,16 @@ const animal4 = new Animal4();
 animal4.value = 'hello world';
 console.log(animal4.value);
 
+// 参数装饰器包括了构造函数的参数装饰器与方法的参数装饰器，它的入参包括类的原型、参数所在的方法名与参数在函数参数中的索引值
+function Params(target: any, key: string, index: number) {
+  // 类的原型、 参数名、参数索引
+  console.log(target, key, index);
+}
+class Animal {
+  public name: string = 'Animal'; // 触发原型属性上的set方法
+  play(@Params val: string) {
+    console.log(val);
+  }
+}
+
 export {};
