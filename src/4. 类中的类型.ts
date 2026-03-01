@@ -338,3 +338,5 @@ console.log(result2); // 输出: ['1', '2', '3']
 
 // 类型安全：TypeScript会根据参数类型推断返回类型
 // const result3: number[] = converter.convert('123'); // 编译错误：类型 'string[]' 不能赋值给类型 'number[]'
+
+export {};
